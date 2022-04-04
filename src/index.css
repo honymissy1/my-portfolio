@@ -1,5 +1,13 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +15,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.techStacks{
+  width: 100vw;
+  height: 30vh;
+  margin-top: 40px
+}
+
+.marquee {
+  width: 100vw;
+  display: flex;
+  color: white;
+  padding: 19px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow: hidden;
+  justify-content: space-evenly;
+}
+
+.techStacks{
+  position: relative;
+  z-index: 4
+}
+
+
+.techStacks .marquee img{
+  height: 50px;
+  margin: 30px 19px
 }
