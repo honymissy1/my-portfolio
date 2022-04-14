@@ -6,7 +6,8 @@ const navInfo = [
 
     {
         id: 2,
-        title: 'About'
+        title: 'About',
+        link: '#about'
     },
 
     {
@@ -21,7 +22,8 @@ const navInfo = [
 
     {
         id: 5,
-        title: 'Resume'
+        title: 'Resume',
+      
     }
 ]
 

@@ -9,8 +9,8 @@ import redux from '../images/technologies/redux.png';
 function TechStacks() {
   return (
     <div>
-      <div className="techStacks">
-          <div className="marquee">
+      <div id="tech-stack" className="techStacks" style={{overflow: 'hidden'}}>
+          <div className="marquee" style={{overflow: 'hidden'}}>
              <img src={Css} alt="" />
              <img src={Bootstrap} alt="" />
              <img src={Javascript} alt="" />

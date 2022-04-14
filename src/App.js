@@ -1,20 +1,18 @@
-import Nav from './components/nav';
-import Main from './components/mainBody'
-import About from './components/about';
-import TechStacks from './components/techStacks';
-import Contact from './components/contact';
-
+import Apps from './components/Apps';
+import { Routes, Route } from "react-router-dom";
+import ContactPage from './components/contactPage';
+import Nav from "./components/nav";
+import MoreProject from './components/moreProject'
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-
-      <Main />
-      <TechStacks />
-      <About />
-
-      <Contact />
+    <div>
+        <Nav />
+     <Routes>
+        <Route path="/" element={<Apps />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="more" element={<MoreProject showButton={true} fullProject={false} />} />
+      </Routes>
     </div>
   );
 }

@@ -3,18 +3,19 @@
 
 body{
     width: 100%;
-    overflow: hidden
+    overflow-x: hidden
 }
 
 nav{
-    margin-top: 19px;
+    background: rgb(234,247,250);
+    /* margin-top: 19px; */
     width: 100%;
     padding: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 19px;
-    
+    color: white;
 }
 
 nav div h1{
@@ -59,7 +60,7 @@ ul li{
 @media screen and (max-width: 700px) {
     body{
         width: 100%;
-        overflow: hidden
+        overflow-x: hidden
     }
 
 

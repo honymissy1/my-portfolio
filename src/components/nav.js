@@ -29,7 +29,7 @@ function Nav() {
         const overlay = document.querySelector('.overlay');
         overlay.style.display = 'none';
         const body = document.querySelector('body');
-        
+        body.style.overflowY = 'scroll'
 
     }
 
@@ -41,12 +41,13 @@ function Nav() {
       <div>
         <div className="overlay"></div>
         <nav>
-            <div className="box"></div>
+            {/* <div className="box"></div> */}
             <div><h1>{'<'}Honymissy{' />'}</h1></div>
 
         {/* Nav Items */}
         <ul>
           {
+              
             useNav.map(ele =>(<a href={ele.link}  key={ele.id} onClick={resume} className={ele.title}><li>{ele.title}</li></a>))
           }
 
@@ -56,7 +57,7 @@ function Nav() {
             <div className="bar" onClick={translate}><ListIcon fontSize="large"/></div>
         </nav>
 
-        <hr style={{position: 'relative', zIndex: '-4'}} />
+        {/* <hr style={{position: 'relative', zIndex: '-4'}} /> */}
       </div>
     );
   }

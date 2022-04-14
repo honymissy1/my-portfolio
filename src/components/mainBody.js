@@ -5,16 +5,15 @@ function Main() {
   return (
     <div className="main">
             <div className="content">
-              <h1>This is who?</h1>
+              <h1>Hi, I’m Onimisi. Nice to meet you</h1>
                 <p>
-                    My name is Onimisi Owolewa, a full stack web developer with vast
-                    experience in modern web development 
-                    framework that gives your brand the confidence 
-                    it deserves.
+                Since beginning my journey as a freelance web developer nearly 5 years ago, I've done remote work for agencies, consulted for startups,
+                 and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, 
+                and perpetually working on improving my chops one design problem at a time.
                 </p>
                 <br/>
-                <p style={{color: 'white'}}>Welcome to my world</p>
-                <button>Explore</button>
+             
+                <a href="#tech-stack"><button>Explore</button></a>
             </div>
       
            <div className="image">

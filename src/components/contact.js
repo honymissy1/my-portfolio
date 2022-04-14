@@ -3,25 +3,9 @@ import ContactImage from '../images/contact.jpg';
 function Contact() {
   return (
     <div className="contact">
-      <div className="contact_container">
-         <div className="contact_form">
-            <form>
-              <label htmlFor="Email" style={{marginTop: '30px'}}>Email</label>
-              <input type="text" id="Email" />
-
-              <label htmlFor="message">Message</label>
-              <textarea name="" id="message"></textarea>
-           
-              <input type="submit" value="Submit" />
-            </form>
-
-
-            
-         </div>
-          <div className="contact_image">
-          <img src={ContactImage} alt="contact"/>
-         </div>
-      </div>
+      <h1>Contact here</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni commodi vero eum tempora corporis odio sapiente cum incidunt facilis, praesentium dicta aliquam quasi eveniet non fugit alias neque officiis repudiandae aliquid officia. Ducimus!</p>
+      <button>Click</button>
     </div>
   );
 }

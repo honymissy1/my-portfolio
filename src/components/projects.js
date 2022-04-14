@@ -1,14 +1,31 @@
-import '../styles/projects.css';
-import ImgMediaCard from './projectCard'
+import ProjectCard from './projectCard'
+import '../styles/project.css';
+import { Link } from "react-router-dom";
 
-function Projects() {
+function Projects({showButton, fullProject}) {
   return (
     <div className="project">
-      <h1 style={{color:'white'}}>Projects</h1>
-
-      <div style={{ display: 'flex', width: '100%', justifyContent: 'space-evenly'}}>
-      cd 
+      <div className="header">
+        <h1>Projects</h1>
+        <h3>Projects</h3>
       </div>
+
+      <div className="project-container">
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+
+        {
+         fullProject ? (<>
+         <ProjectCard />
+         <ProjectCard />
+         <ProjectCard />
+         </>
+         ): ('')
+        }
+
+      </div>
+      {showButton ? (<Link to="more"><h1 className="more">More Projects</h1></Link>) : (<Link to="/"><h1 className="more">Back</h1></Link>)}   
     </div>
   );
 }

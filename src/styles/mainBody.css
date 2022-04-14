@@ -4,6 +4,10 @@
 *{
     box-sizing: border-box;
 }
+
+html{
+    scroll-behavior: smooth;
+}
 .main{
     margin-top: 70px;
     width: 100%;
@@ -39,36 +43,37 @@
 .content h1{
     font-size: 40px;
     color: rgb(241, 235, 235);
-    letter-spacing: 15px;
-    font-family: 'Lobster', cursive;
-    /* font-family: 'Titillium Web', sans-serif; */
-    margin-bottom: 19px;
-    font-weight: 400;
+    letter-spacing: 5px;
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 10px;
+    font-weight: bolder;
 }
 
 .content {
     width: 55%;
-    letter-spacing: 3px;
-    background-color: #8075FF;
+    word-spacing: 4px;
+    background-color: rgb(28,33,41);
     color: white;
     padding: 30px;
 }
-.content button {
-    border: 1.7px solid white;
-    color: rgb(41, 36, 36);
+.content a button {
+    border: none;
+    color: rgb(251, 247, 247);
     cursor: pointer;
-    background-color: white;
+    font-weight: bolder;
+    background-color: #632FAF;
     font-size: 17px;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 30px;
-    width: 190px;
-    box-shadow: 1px .5px 5px black;
+    padding: 14px 40px;
+    /* border-radius: 5px; */
+    margin-top: 10px;
+    width: auto;
+    /* box-shadow: 1px .5px 5px black; */
 }
 .content p{
     font-size: 16px;
     width: 90%;
-    color: rgb(241, 231, 231);
+    /* text-align: center; */
+    color: rgb(224, 209, 209);
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -86,16 +91,21 @@
 
     .content {
         width: 100%;
-        letter-spacing: 3px;
-        background-color: #8075FF;
+        word-spacing: 5px;
+        background-color: rgb(28,33,41);
         color: white;
-        padding: 30px;
+        padding: 10px;
     }
 
     .content p{
-        font-size: 20px;
+        font-size: 15px;
         width: 100%;
+        color: rgb(233, 228, 222);
         font-family: 'Titillium Web', sans-serif;
+    }
+
+    .content h1{
+        font-weight: bolder
     }
 
     .main div h1{

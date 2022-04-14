@@ -1,16 +1,71 @@
-.seperator{
-    width: 100vw;
-    height: 190px;
-    background-image: url('../images/Vector.png');
-    background-repeat: no-repeat;
-    position: relative;
-    margin-top: 100px;
-    background-position: 70% 0%;
+.skill-container{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-evenly;
+}
 
+.skills{
+    margin-bottom:30px;
+    width: 400px;
+    height: auto;
+    padding: 10px;
+    /* border:1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.skill-content{
+    margin-left: 15px;
+    /* padding: 5px; */
+}
+.skill-content h1{
+    color: white;
+}
+
+.skill-content p{
+    font-size: 16px;
+    color: rgb(221, 211, 211);
+}
+
+.icon{
+    width:45%;
+    height: auto;
+}
+
+.icon img{
+    width: 100%;
 }
 
 .about-content{
-    height: 500px;
+    height: auto;
     width: 100%;
-    background: #E1B07E
+    background: #222725;
+    color: white;
+    padding-top:150px;
+}
+
+
+.custom-shape-divider-top-1649280878 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1649280878 svg {
+    position: relative;
+    display: block;
+    width: calc(187% + 1.3px);
+    height: 123px;
+}
+
+.custom-shape-divider-top-1649280878 .shape-fill {
+    fill: #FFFFFD;
 }
