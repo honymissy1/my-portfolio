@@ -1,26 +1,22 @@
 
-function ProjectCard({tools}) {
+function ProjectCard({title, tools, description, code, site}) {  
   return (
     <div className="project-card">
         <div className="card-image"></div>
         <div className="card-content">
-            <h1>Shopping App</h1>
+            <h1>{title}</h1>
 
             <ol style={{display: 'inline'}}>Tools - </ol>
-            <p  style={{display: 'inline'}} className="tools">Html | Css |  JavaScript</p>
-            <p className="description">
-                Lorem ipsum dolor sit amet consectetur
-                 adipisicing elit.
-                 Fugiat, quae numquam!
-                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, aliquam ducimus!
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dicta quod.
-            </p>
+            <p  style={{display: 'inline'}} className="tools">{tools}</p>
+            <p className="description" style={{display:'flex', alignItems: 'center'}}>
+               {description}
+               </p>
 
         </div>
 
         <div className="cta">
-            <button>View Code</button>
-            <button>View Site</button>
+            <button><a href={code}>View Code</a></button>
+            <button><a href={site} target="_blank" rel="noreferrer">View Site</a></button>
         </div>
     </div>
   );

@@ -1,65 +1,76 @@
 import '../styles/nav.css';
-import ListIcon from '@material-ui/icons/List';
-import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
-import {useState, useEffect} from 'react';
-import navInfo from '../assets/navInfo'
+// import ListIcon from '@material-ui/icons/List';
+// import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
+import { useEffect} from 'react';
+// import navInfo from '../assets/navInfo';
 
 function Nav() {
-  // eslint-disable-next-line
-  const [useNav,setNav] = useState(navInfo)
-
   useEffect(() =>{
-    setNav(useNav)
-  }, [useNav])
-    const translate = () =>{
-        const nav = document.querySelector('ul');
-        nav.style.transform = 'translateX(0%)';
-        const overlay = document.querySelector('.overlay');
-        overlay.style.display = 'block';
-        const body = document.querySelector('body');
-        body.style.overflow = 'hidden'
-        overlay.onclick = () =>{
-          cancel()
-        }
-    }
+    console.log('Used');
+    const list = document.querySelectorAll('nav ul li');
+    
+    list.forEach(ele =>{
+      ele.onclick = () =>{
+        const nav = document.querySelector('nav');
+        const overlay = document.querySelector('.overlay')
+        const bar = document.querySelectorAll('.bar > div');
+        bar.forEach((ele, index) =>{
+          ele.classList.remove('bar'+(index+1))
+         })
+        nav.classList.remove("change"); 
+        overlay.classList.remove('overlay-display')
+        console.log(ele.textContent);
+      }
+    })
+    
+  },[])
+  const navToggle = () =>{
+    const nav = document.querySelector('nav');
+    const bar = document.querySelectorAll('.bar > div');
+    const overlay = document.querySelector('.overlay')
 
-    const cancel = () =>{
-        const nav = document.querySelector('ul');
-        nav.style.transform = 'translateX(100%)';
-        const overlay = document.querySelector('.overlay');
-        overlay.style.display = 'none';
-        const body = document.querySelector('body');
-        body.style.overflowY = 'scroll'
 
-    }
+    nav.classList.toggle("change");     
+    overlay.classList.toggle('overlay-display')
+    bar.forEach((ele, index) =>{
+     ele.classList.toggle('bar'+(index+1))
+    })
+  }
 
-    const resume = (e) =>{
-      console.log(e.target.innerText)
-    }
+  const overlay = () =>{
+    const overlay = document.querySelector('.overlay')
+    const nav = document.querySelector('nav');
+    const bar = document.querySelectorAll('.bar > div');
 
+    bar.forEach((ele, index) =>{
+      ele.classList.toggle('bar'+(index+1))
+     })
+    nav.classList.toggle('change');
+    overlay.classList.toggle('overlay-display')
+   }
     return (
-      <div>
-        <div className="overlay"></div>
-        <nav>
-            {/* <div className="box"></div> */}
-            <div><h1>{'<'}Honymissy{' />'}</h1></div>
+      <>
+        <div className="bar" onClick={navToggle}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className="overlay" onClick={overlay}></div>
+      <nav>
+       
+        <div className="logo">
+          <h3>{'<owolewaBamidele />'}</h3>
+        </div>
 
-        {/* Nav Items */}
         <ul>
-          {
-              
-            useNav.map(ele =>(<a href={ele.link}  key={ele.id} onClick={resume} className={ele.title}><li>{ele.title}</li></a>))
-          }
-
-            <div className="cancel" onClick={cancel}><CloseRoundedIcon fontSize="large"/></div>
+          <li>Home</li>
+           <li><a href="#project">Project</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="#contact">Contact Me</a></li>        
         </ul>
-
-            <div className="bar" onClick={translate}><ListIcon fontSize="large"/></div>
-        </nav>
-
-        {/* <hr style={{position: 'relative', zIndex: '-4'}} /> */}
-      </div>
-    );
+      </nav>
+      </>
+    )
   }
   
   export default Nav;

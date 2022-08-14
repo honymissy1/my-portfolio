@@ -13,9 +13,39 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <title>Welcome Home</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0
+      }
+      .layed{
+        width: 100%;
+        height: 100vh;
+        background: rgb(220,243,242);
+       display: flex;
+       align-items:center;
+       justify-content: center
+      }
+
+      .layed img{
+        width: 50%;
+      
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div class="layed">
+      <img src="./loader.gif" alt="">
+    </div>
+
+  <script>
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  const lay = document.querySelector('.layed');
+  lay.style.display = 'none'
+});
+  </script>
   </body>
 </html>
