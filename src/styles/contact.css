@@ -1,3 +1,170 @@
-.contact {
-    padding: 30px
+.contact{
+    background: #2BC4ED;  /* fallback for old browsers */
+    height: auto;
+    padding: 30px;
+    width: 100%;
 }
+
+.grid-container{
+    display: grid;
+    height: auto;
+    margin: 0px auto;
+    width: 85%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 60px;
+}   
+
+.grid-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 1px .5px 11px black;
+    padding: 30px;
+    border-radius: 10px;
+    /* grid items align start */
+    align-self: start;
+}
+
+.grid-container form > input{
+    border: none
+ }
+
+.grid-image{
+    /* border: 3px solid pink; */
+    height: auto;
+    align-self: end;
+}
+
+.grid-image img{
+    width: 100%
+}
+
+
+.grid-description{
+    /* border: 1px solid red; */
+    align-self: start;
+    padding: 30px;
+    font-size: 1.5em
+}
+
+
+.grid-button{
+    width: 100%
+}
+
+.grid-container form input{
+    width: 100%;
+    padding: 10px;
+}
+
+.social-content{
+    height: auto;
+    margin:0px auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+
+}
+
+.skill-ul{
+    list-style-type: circle;
+    color: rgb(12, 93, 107)
+}
+
+.skill-ul li{
+   display: inline-block;
+   margin-right: 10px;
+   list-style-type: circle;
+   padding: 10px
+}
+
+.social-media{
+    grid-column: span 2;
+    /* border: 1px solid */
+}
+
+.social-content > div{
+    width: 19%;
+  
+}
+
+
+.social-content > div img{
+    width: 100%;
+}
+
+    .social-media{
+        grid-column: 2;
+    }
+
+@media screen and (max-width: 900px) {
+    /* .container{
+        width: 90%;
+    } */
+
+    
+
+    .grid-container form{
+        display: flex;
+        grid-column: span 2;
+    }
+
+    .grid-image{
+
+        height: auto;
+        grid-column: span 2;
+    }
+
+    .social-media{
+        grid-column: 1 / span 2;
+    }
+
+
+       .grid-description{
+        align-self: start;
+        padding: 0px;
+        grid-column: 1 / span 2;
+        grid-row: 2
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .grid-container {
+        width: 100%;
+        padding : 10px
+    }
+    .grid-image{
+        /* border: 3px solid pink; */
+        height: auto;
+        grid-column: span 2;
+    }
+
+    .social-content{
+        grid-column: span 2;
+    }
+
+    .grid-description{
+        /* border: 1px solid red; */
+        padding: 0px;
+        grid-column: span 2;
+    }
+
+    .grid-container form{
+        display: flex;
+        grid-column: span 2;
+    }
+
+    .grid-image{
+        /* border: 3px solid pink; */
+        height: auto;
+        width: 100%;
+        align-self: end;
+    }
+
+    .social-media{
+        grid-column: 1 / span 2;
+    }
+}
+
