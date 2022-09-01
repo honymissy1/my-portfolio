@@ -2,8 +2,8 @@ import '../styles/footer.css'
 
 const Footer = () =>{
     return(
-        <div className="footer">
-        <h3>Footer here</h3>
+        <div className="footer" style={{textAlign: 'center'}}>
+          <h3 style={{color: 'white'}}>&copy; 2022 Owolewa Bamidele Onimisi</h3>
         </div>
     )
 }

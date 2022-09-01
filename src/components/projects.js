@@ -10,7 +10,18 @@ function Projects({showButton, fullProject}) {
         <h3>Projects</h3>
       </div>
 
+      
+
       <div  className="project-container">
+
+      <ProjectCard 
+          title="Web Dictionary"
+          tools="Html | Css | React | Material | Redux | Restful Api"
+          description="Well structured web dictionary from the dictionary.com API, has all valid english words."
+          code="https://github.com/honymissy1"
+          site="http://diksonary.netlify.app/"
+        />
+
         <ProjectCard 
           title="Threetop Travels"
           tools="Html | Css | JavaScript | Bootsrap"
@@ -20,7 +31,21 @@ function Projects({showButton, fullProject}) {
           site="https://threetop.netlify.app"
         />
 
-<ProjectCard 
+       <ProjectCard 
+          title="TNI Web App"
+          tools="Html | Css | JavaScript | Node | Jwt "
+          description="A full web application with a shopping cart, a blog, full authentication 
+          and authorization with Jwt."
+          code="https://github.com/honymissy1"
+          site="https://tni.netlify.app"
+        />
+
+ 
+
+        {
+         fullProject ? (<>
+
+        <ProjectCard 
           title="Blood Donation"
           tools="Html | Css | JavaScript "
           description="Form website for blood donation sent to client's 
@@ -29,7 +54,7 @@ function Projects({showButton, fullProject}) {
           site="https://nwfjalil.netlify.app"
         />
 
-        <ProjectCard 
+       <ProjectCard 
           title="Simple Portfolio"
           tools="React"
           description="Simple Portfolio Web App build with react Js ."
@@ -38,17 +63,7 @@ function Projects({showButton, fullProject}) {
         />
 
 
-        {
-         fullProject ? (<>
-          <ProjectCard 
-          tools="Html | Css | JavaScript | Bootsrap"
-          description="A travel agency profile website beautiful but simple 
-          and easy to use a little bit of bootstrap."
-          code="https://github.com/honymissy1"
-          site="https://threetop.netlify.app"
-        />
-
-        <ProjectCard 
+        {/* <ProjectCard 
           title=""
           tools="Html | Css | JavaScript "
           description="Form website for blood donation sent to client's 
@@ -61,7 +76,7 @@ function Projects({showButton, fullProject}) {
         description="Simple Portfolio Web App build with react Js ."
         code="https://github.com/honymissy1"
         site="https://seif-miehiar.netlify.app"
-      />
+      /> */}
 
 
          </>
