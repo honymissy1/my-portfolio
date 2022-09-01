@@ -48,21 +48,21 @@ function ContactPage() {
        <div className="social-media">
          <p style={{textAlign: 'center', fontSize: '1.4em'}}>Or</p>
          <div className="social-content">
-           <div>
+           <a href='https://www.linkedin.com/in/onimisi-owolewa-693a06168/'>
              <img src={Linkedin} alt="facebook logo" />
-           </div>
+           </a>
 
-           <div>
+           <a href='tel:+2348155550465'>
              <img src={Whatsapp} alt="facebook logo" />
-           </div>
+           </a>
 
-           <div>
+           <a href='https://github.com/honymissy1/'>
              <img src={Github} alt="facebook logo" />
-           </div>
+           </a>
 
-           <div>
+           <a href='https://www.facebook.com/honymissy.owolewa.1/'>
              <img src={Facebook} alt="facebook logo" />
-           </div>
+           </a>
 
          </div>
        </div>

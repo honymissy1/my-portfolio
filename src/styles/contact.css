@@ -84,13 +84,13 @@
     /* border: 1px solid */
 }
 
-.social-content > div{
+.social-content > a{
     width: 19%;
   
 }
 
 
-.social-content > div img{
+.social-content > a img{
     width: 100%;
 }
 
